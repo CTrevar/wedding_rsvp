@@ -1,0 +1,20 @@
+
+# Couple's Names
+bride_first_name: "Margaret"
+bride_last_name: "Hale"
+groom_first_name: "John"
+groom_last_name: "Thornton"
+
+# Wedding Information
+wedding_date: 1855-10-01
+wedding_city: "Milton"
+wedding_state: "Cambridgeshire" # optional
+wedding_country: "England" # optional
+
+# Religious Event
+mass_time: 18:00:00
+mass_place: "Church of St Mary"
+
+# Party!
+reception_time: 20:00:00
+reception_place: "Marlborough Mills"
