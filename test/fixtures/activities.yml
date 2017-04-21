@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  dress_code: 
+  start_day: 2017-04-21
+  start_hour: 2017-04-21 01:13:53
+
+two:
+  name: MyString
+  description: MyString
+  dress_code: 
+  start_day: 2017-04-21
+  start_hour: 2017-04-21 01:13:53
