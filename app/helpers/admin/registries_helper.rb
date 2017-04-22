@@ -1,0 +1,2 @@
+module Admin::RegistriesHelper
+end
