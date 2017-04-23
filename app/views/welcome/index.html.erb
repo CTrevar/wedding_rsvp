@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-md-12">
           <h1 class=""><%= "#{ENV['bride_first_name']}&#{ENV['groom_first_name']}" %></h1>
-          <p class="intro-text">Description</p>
+          <p class="intro-text">We are so excited and can't wait to see you.</p>
           <a href="#about" class="btn btn-circle page-scroll">
             <i class="fa fa-angle-double-down animated"></i>
           </a>
@@ -19,29 +19,31 @@
 <section id="about" class="container content-section text-center">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2">
-      <h2>About Grayscale</h2>
-      <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-      <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-      <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+      <h2><%= @pretty_place %></h2>
+      <p> <%= @pretty_date %> </p>
+      <div class="countdown-container"></div>
     </div>
   </div>
 </section>
 
-<!-- Download Section -->
-<section id="download" class="content-section text-center">
+<!-- acommodations Section -->
+<section id="acommodations" class="content-section text-center">
   <div class="download-section">
     <div class="container">
-      <div class="col-lg-8 col-lg-offset-2">
-        <h2>Download Grayscale</h2>
-        <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-        <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+      <div class="col-lg-8 col-lg-offset-2 text-left">
+        <h2><%= t(:acommodations) %></h2>
+        <% @acommodations.each do |hotel| %>
+          <h4><i class="fa fa-building" aria-hidden="true"></i> <%= hotel.name %></h4>
+          <p><%= hotel.description %></p>
+          <%= link_to "Visit Online", hotel.link, class:"btn btn-info" %>
+        <% end %>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="container content-section text-center">
+<!-- itinerary Section -->
+<section id="itinerary" class="container content-section text-center">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2">
       <h2>Contact Start Bootstrap</h2>
@@ -64,4 +66,4 @@
 </section>
 
 <!-- Map Section -->
-<div id="map"></div>
+<!-- <div id="map"></div> -->

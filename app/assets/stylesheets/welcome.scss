@@ -1,3 +1,32 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.intro {
+  background: image_url("couple") no-repeat bottom center scroll !important;
+}
+
+// .download-section {
+//   background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+// }
+
+.countdown-container{
+  margin-bottom: 50px;
+}
+.countdown-container div {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 1;
+  text-align: right;
+}
+
+h4 { margin-bottom: 0 !important;}
+
+body#page-top {
+  font-family: 'Crimson Text', serif;
+
+  h1, h2, h3, h4, h5, h6, h7 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}

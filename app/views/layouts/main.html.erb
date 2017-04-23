@@ -21,7 +21,7 @@
               Menu <i class="fa fa-bars"></i>
           </button>
           <a class="navbar-brand page-scroll" href="#page-top">
-            <i class="fa fa-play-circle"></i> <span class="light"><%= ENV['bride_first_name'] %></span>&<span class="light"><%= ENV['groom_first_name'] %></span>
+            <span class="light"><%= ENV['bride_first_name'] %></span>&<span class="light"><%= ENV['groom_first_name'] %></span>
           </a>
         </div>
 
@@ -33,13 +33,19 @@
               <a href="#page-top"></a>
             </li>
             <li>
-              <a class="page-scroll" href="#about">About</a>
+              <a class="page-scroll" href="#about"><%= t(:save_the_date) %></a>
             </li>
             <li>
-              <a class="page-scroll" href="#download">Download</a>
+              <a class="page-scroll" href="#acommodations"><%= t(:acommodations) %></a>
             </li>
             <li>
-              <a class="page-scroll" href="#contact">Contact</a>
+              <a class="page-scroll" href="#itinerary"><%= t(:itinerary) %></a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#registry"><%= t(:registry) %></a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#blog"><%= t(:blog) %></a>
             </li>
           </ul>
         </div>
@@ -56,12 +62,12 @@
         <p>Copyright &copy; Your Website 2016</p>
       </div>
     </footer>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['gmaps_key'] %>"></script>
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['gmaps_key'] %>"></script> -->
 
     <%= javascript_include_tag 'grayscale.min' %>
 
     <script type="text/javascript">
-      <%= render partial: 'welcome/map.js.erb' %>
+      <%#= render partial: 'welcome/map.js.erb' %>
     </script>
   </body>
 </html>
