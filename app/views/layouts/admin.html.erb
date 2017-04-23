@@ -3,7 +3,7 @@
 
   <head>
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Wedding-Admin</title>
 
     <%= csrf_meta_tags %>
     <meta charset="utf-8">
@@ -33,35 +33,49 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">SB Admin</a>
+          <a class="navbar-brand" href="index.html">Wedding Admin</a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
-
+          <% if admin_signed_in? %>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <%= current_admin.email %> <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li>
-                  <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-              </li>
-              <li>
-                  <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-              </li>
-              <li>
-                  <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-              </li>
               <li class="divider"></li>
               <li>
-                  <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                  <%= link_to sign_out_sessions_path, method: 'delete' do%>
+                    <i class="fa fa-fw fa-power-off"></i> Log Out
+                  <% end %>
               </li>
             </ul>
           </li>
+          <% end %>
         </ul>
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
-            <li class="active">
-              <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+            <li class="">
+              <%= link_to "Dashboard", '#' %>
+            </li>
+
+            <li class="<%= 'active' if params[:controller] == "admin/guests" %>">
+              <%= link_to "Guests", admin_guests_path %>
+            </li>
+
+            <li class="<%= 'active' if params[:controller] == "admin/hotels" %>">
+              <%= link_to "Hotels", admin_hotels_path %>
+            </li>
+
+            <li class="<%= 'active' if params[:controller] == "admin/posts" %>">
+              <%= link_to "Posts", admin_posts_path %>
+            </li>
+
+            <li class="<%= 'active' if params[:controller] == "admin/registries" %>">
+              <%= link_to "Registry", admin_registries_path %>
+            </li>
+
+            <li class="<%= 'active' if params[:controller] == "admin/activities" %>">
+              <%= link_to "Itinerary", admin_activities_path %>
             </li>
 
           </ul>
