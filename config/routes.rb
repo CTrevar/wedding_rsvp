@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :activities
     resources :guests
     resources :hotels
+    resources :posts
     resources :registries
   end
   # The priority is based upon order of creation: first created -> highest priority.
