@@ -18,3 +18,6 @@ mass_place: "Church of St Mary"
 # Party!
 reception_time: 20:00:00
 reception_place: "Marlborough Mills"
+
+# Google Maps API Key
+gmaps_key: "YOUR_API_KEY at https://developers.google.com/maps/documentation/javascript/get-api-key"
