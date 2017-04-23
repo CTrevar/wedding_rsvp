@@ -1,1 +1,1 @@
-json.array! @guests, partial: 'guests/guest', as: :guest
+json.array! @guests, partial: 'admin/guests/guest', as: :guest

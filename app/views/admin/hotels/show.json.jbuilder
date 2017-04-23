@@ -1,1 +1,1 @@
-json.partial! "hotels/hotel", hotel: @hotel
+json.partial! "admin/hotels/hotel", hotel: @hotel

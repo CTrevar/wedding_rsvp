@@ -1,1 +1,1 @@
-json.array! @registries, partial: 'registries/registry', as: :registry
+json.array! @registries, partial: 'admin/registries/registry', as: :registry

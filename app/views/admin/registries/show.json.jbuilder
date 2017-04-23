@@ -1,1 +1,1 @@
-json.partial! "registries/registry", registry: @registry
+json.partial! "admin/registries/registry", registry: @registry

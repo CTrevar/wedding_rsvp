@@ -1,1 +1,1 @@
-json.partial! "activities/activity", activity: @activity
+json.partial! "admin/activities/activity", activity: @activity
