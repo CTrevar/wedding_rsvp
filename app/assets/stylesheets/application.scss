@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat');
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "_variables";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ @import "welcome";
