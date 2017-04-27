@@ -62,6 +62,25 @@ class Admin::GuestsController < ApplicationController
     end
   end
 
+  def import
+
+    @email = params.fetch(:email, false)
+    @first_name = params.fetch(:name, false)
+
+    # Check if guest has been created
+    @guest = Guest.find_by_email(@email) if @email
+
+    if !@guest
+      @guest = Guest.new(first_name: @first_name, email: @email)
+      @guest.save
+    end
+
+    respond_to do |format|
+      format.js
+    end
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_guest

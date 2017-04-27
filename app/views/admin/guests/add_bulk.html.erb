@@ -1,0 +1,30 @@
+<h1>Import</h1>
+
+<%= form_tag(import_admin_guests_path, multipart: true, remote: true, authenticity_token: true, id:"add_guests" ) do |f| %>
+
+  <label>Guests</label>
+  <!-- List of guests  -->
+  <div id="error-msg" style="display:none;" class="alert alert-danger" role="alert">
+    Invalid file selected, only csv files are accepted.
+  </div>
+
+
+  <div class="form-group">
+    <label for="guests_file">Add Guests CSV</label>
+    <%= file_field_tag "guests_file", type: :file, accept:".csv", class:"file", onchange: "checkFile(this);" %>
+    <p class="help-block">Only CSV files are accepted.</p>
+  </div>
+
+  <br>
+  <%= submit_tag "Import", class:"btn btn-primary" %>
+
+<% end %>
+
+<hr>
+
+<ul id="output" class="list-group">
+</ul>
+
+<script>
+  <%= render 'admin/guests/upload_csv.js.erb' %>
+</script>

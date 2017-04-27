@@ -1,0 +1,93 @@
+function checkFile(sender) {
+    // var validExts = new Array(".xlsx", ".xls", ".csv");
+    var fileExt = sender.value;
+    fileExt = fileExt.substring(fileExt.lastIndexOf('.'));
+    // if (validExts.indexOf(fileExt) < 0) {
+    if (fileExt != ".csv") {
+      // alert("Invalid file selected, valid files are of " + validExts.toString() + " types.");
+      $('#error-msg').show();
+      sender.value='';
+      return false;
+    } else {
+      $('#error-msg').hide();
+      return true;
+    }
+  }
+
+  function processData(allText) {
+    allText = allText.replace(/\r/g, "\n");
+    var allTextLines = allText.split(/\r\n|\n/);
+    var headers = allTextLines[0].split(',');
+    var lines = [];
+
+    for (var i=1; i<allTextLines.length; i++) {
+      var data = allTextLines[i].split(',');
+      if (data.length == headers.length) {
+
+        // var data_row = [];
+        var data_str = "";
+        for (var j=0; j<headers.length; j++) {
+          // data_row.push(headers[j]+":"+data[j]);
+          data_str += headers[j]+"="+data[j]+"&";
+        }
+
+        // Send to rails to add guest
+
+        $.ajax({
+          url: $('#add_guests').attr("action"),
+          method: "POST",
+          data: data_str,
+          beforeSend: function(xhr) {
+            return xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+          },
+          success: (function(_this) {
+            return function() {
+              return; // alert('success');
+            };
+          })(this),
+          error: function(xhr, textStatus, error) {
+            var e, error_msg, errors, i, len;
+            errors = jQuery.parseJSON(xhr.responseText).errors;
+            error_msg = '<ul>';
+            for (i = 0, len = errors.length; i < len; i++) {
+              e = errors[i];
+              error_msg += '<li>' + e + '</li>';
+            }
+            return; // alert('fail');
+          },
+          done: (function(_this) {
+            return function() {
+              return console.log('donee');
+            };
+          })(this)
+        });
+
+
+
+        // lines.push(tarr);
+      }
+    }
+    // alert(lines);
+  }
+
+  $(document).on('ready', function() {
+
+    $("#add_guests").bind('submit', function (e) {
+      e.preventDefault();
+      var file = document.getElementById('guests_file');
+
+      if(file.files.length){
+        var reader = new FileReader();
+        var content;
+
+        reader.onload = function(e){
+          content = e.target.result;
+        };
+
+        reader.readAsBinaryString(file.files[0]);
+        setTimeout(function(){ processData(content); }, 300);
+      }
+
+      return false;
+    });
+  });

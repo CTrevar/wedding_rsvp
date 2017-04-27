@@ -1,0 +1,14 @@
+$('#output').append("<%= j (render partial: '/admin/guests/guest', locals: { email: @email, first_name: @first_name }).html_safe %>");
+var el = $(".guest-added").last();
+<% if @guest.errors.empty? %>
+  $('.checkmark-completed').css('visibility', 'visible');
+<% else %>
+  el.addClass('color-error');
+  var list = document.createElement("ul");
+  <% @guest.errors.full_messages.each do |error_msg| %>
+    var elem = document.createElement("li");
+    elem.innerHTML = "<%= error_msg %>";
+    list.appendChild(elem);
+  <% end %>
+  $('.error-message').last().append(list);
+<% end %>
