@@ -1,13 +1,55 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1, .h1 {
+  font-size: 50px !important;
+  margin: 0 !important;
+}
+
+h4 { margin-bottom: 0 !important;}
+
+body#page-top {
+  font-family: 'Crimson Text', serif;
+
+  h1, h2, h3, h4, h5, h6, h7 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
 .intro {
   background: image_url("couple") no-repeat bottom center scroll !important;
 }
 
-// .download-section {
-//   background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-// }
+.content-section {
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+
+@media (min-width: 767px) {
+  .content-section {
+    padding-top: 60px !important;
+  }
+
+  .intro {
+    height: 75% !important;
+  }
+}
+
+.white-section {
+  background-color: #fff;
+  color: #000;
+}
+
+.grey-section {
+  background-color: #eee;
+  color: #000;
+}
+
+.no-margin {
+  margin: 0;
+}
+
 
 .countdown-container{
   margin-bottom: 50px;
@@ -19,14 +61,4 @@
   font-weight: 100;
   line-height: 1;
   text-align: right;
-}
-
-h4 { margin-bottom: 0 !important;}
-
-body#page-top {
-  font-family: 'Crimson Text', serif;
-
-  h1, h2, h3, h4, h5, h6, h7 {
-    font-family: 'Montserrat', sans-serif;
-  }
 }
