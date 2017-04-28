@@ -11,37 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :rsvp %>
-    <%= f.check_box :rsvp %>
+    <%= f.check_box :rsvp, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :num_assistants %>
-    <%= f.number_field :num_assistants %>
+    <%= f.number_field :num_assistants, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :arrival_date %>
-    <%= f.date_select :arrival_date %>
+    <%= f.date_select :arrival_date, class:"form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class:"btn btn-primary" %>
   </div>
 <% end %>

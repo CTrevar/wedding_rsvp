@@ -1,27 +1,28 @@
 <h1>Registries</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Link</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @registries.each do |registry| %>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
       <tr>
-        <td><%= registry.name %></td>
-        <td><%= registry.link %></td>
-        <td><%= link_to 'Show', admin_registry_path(registry) %></td>
-        <td><%= link_to 'Edit', edit_admin_registry_path(registry) %></td>
-        <td><%= link_to 'Destroy', admin_registry_path(registry), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Link</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @registries.each do |registry| %>
+        <tr>
+          <td><%= registry.name %></td>
+          <td><%= registry.link %></td>
+          <td><%= link_to 'Show', admin_registry_path(registry) %></td>
+          <td><%= link_to 'Edit', edit_admin_registry_path(registry) %></td>
+          <td><%= link_to 'Destroy', admin_registry_path(registry), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
 <%= link_to 'New Registry', new_admin_registry_path %>

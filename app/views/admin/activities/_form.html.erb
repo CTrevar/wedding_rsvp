@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.text_area :description, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :dress_code %>
-    <%= f.text_field :dress_code %>
+    <%= f.text_field :dress_code, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :start_day %>
-    <%= f.date_select :start_day %>
+    <%= f.date_select :start_day, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :start_hour %>
-    <%= f.time_select :start_hour %>
+    <%= f.time_select :start_hour, class:"form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class:"btn btn-primary" %>
   </div>
 <% end %>
