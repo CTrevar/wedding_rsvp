@@ -11,14 +11,23 @@ h4 { margin-bottom: 0 !important;}
 
 body#page-top {
   font-family: 'Crimson Text', serif;
+  background-color: #eee;
 
   h1, h2, h3, h4, h5, h6, h7 {
     font-family: 'Montserrat', sans-serif;
   }
+
+  .btn-primary {
+    background-color: #42DCA3;
+    border: 0;
+    &:hover {
+      background-color: darken(#42DCA3, 20%);
+    }
+  }
 }
 
 .intro {
-  background: image_url("couple") no-repeat bottom center scroll !important;
+  background: image_url("couple") no-repeat bottom center scroll #000 !important;
 }
 
 .content-section {
@@ -51,14 +60,23 @@ body#page-top {
 }
 
 
-.countdown-container{
-  margin-bottom: 50px;
-}
+// COUNTDOWN
 .countdown-container div {
   display: inline-block;
   margin-left: 10px;
-  font-size: 30px;
+  font-size: 42px;
   font-weight: 100;
   line-height: 1;
-  text-align: right;
+  text-align: center;
+}
+
+.countdown-container div:first-child {
+  margin-left: 0;
+}
+.countdown-container div span {
+  display: block;
+  padding-top: 3px;
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: uppercase;
 }
