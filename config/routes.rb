@@ -3,18 +3,26 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :activities
-    resources :guests
+    resources :guests do
+      collection do
+        get 'add_bulk'
+        post 'import'
+      end
+    end
     resources :hotels
     resources :posts
     resources :registries
   end
+
+  post 'rsvp', to: 'rsvp#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+  get 'blog', to: 'welcome#blog'
 
-  # Example of regular route:
+  # Example of regular route:p
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

@@ -1,0 +1,14 @@
+<%= render 'welcome/intro' %>
+
+
+<section id="blog" class="content-section text-center white-section">
+  <div class="container">
+    <div class="col-lg-8 col-lg-offset-2  text-left">
+      <% @posts.each do |post| %>
+        <%= render 'welcome/post', post: post %>
+        <hr>
+        <br>
+      <% end %>
+    </div>
+  </div>
+</section>
