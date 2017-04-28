@@ -1,3 +1,31 @@
+<% content_for :logo_link do %>
+  <a class="navbar-brand page-scroll" href="#page-top">
+    <span class="light"><%= ENV['bride_first_name'] %></span>&<span class="light"><%= ENV['groom_first_name'] %></span>
+  </a>
+<% end %>
+
+<% content_for :navbar_links do %>
+  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+  <li class="hidden">
+    <a href="#page-top"></a>
+  </li>
+  <li>
+    <a class="page-scroll" data-turbolinks="false" href="#about"><%= t(:save_the_date) %></a>
+  </li>
+  <li>
+    <a class="page-scroll" data-turbolinks="false" href="#itinerary"><%= t(:itinerary) %></a>
+  </li>
+  <li>
+    <a class="page-scroll" data-turbolinks="false" href="#acommodations"><%= t(:acommodations) %></a>
+  </li>
+  <li>
+    <a class="page-scroll" data-turbolinks="false" href="#registry"><%= t(:registry) %></a>
+  </li>
+  <li>
+    <a class="page-scroll" data-turbolinks="false" href="<%= blog_path %>"><%= t(:blog) %></a>
+  </li>
+<% end %>
+
 <!-- Intro Header -->
 <%= render 'welcome/intro' %>
 

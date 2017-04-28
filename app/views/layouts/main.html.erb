@@ -20,33 +20,13 @@
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
               Menu <i class="fa fa-bars"></i>
           </button>
-          <a class="navbar-brand page-scroll" href="#page-top">
-            <span class="light"><%= ENV['bride_first_name'] %></span>&<span class="light"><%= ENV['groom_first_name'] %></span>
-          </a>
+          <%= content_for :logo_link %>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
           <ul class="nav navbar-nav">
-            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-            <li class="hidden">
-              <a href="#page-top"></a>
-            </li>
-            <li>
-              <a class="page-scroll" data-turbolinks="false" href="#about"><%= t(:save_the_date) %></a>
-            </li>
-            <li>
-              <a class="page-scroll" data-turbolinks="false" href="#itinerary"><%= t(:itinerary) %></a>
-            </li>
-            <li>
-              <a class="page-scroll" data-turbolinks="false" href="#acommodations"><%= t(:acommodations) %></a>
-            </li>
-            <li>
-              <a class="page-scroll" data-turbolinks="false" href="#registry"><%= t(:registry) %></a>
-            </li>
-            <li>
-              <a class="page-scroll" data-turbolinks="false" href="#blog"><%= t(:blog) %></a>
-            </li>
+            <%= content_for :navbar_links %>
           </ul>
         </div>
         <!-- /.navbar-collapse -->

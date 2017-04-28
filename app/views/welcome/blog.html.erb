@@ -1,5 +1,32 @@
-<%= render 'welcome/intro' %>
+<% content_for :logo_link do %>
+  <a class="navbar-brand page-scroll" href="<%= root_path %>">
+    <span class="light"><%= ENV['bride_first_name'] %></span>&<span class="light"><%= ENV['groom_first_name'] %></span>
+  </a>
+<% end %>
 
+<% content_for :navbar_links do %>
+  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+  <li class="hidden">
+    <a href="<%= root_path %>"></a>
+  </li>
+  <li>
+    <a class="page-scroll" data-turbolinks="false" href="<%= root_path %>#about"><%= t(:save_the_date) %></a>
+  </li>
+  <li>
+    <a class="page-scroll" data-turbolinks="false" href="<%= root_path %>#itinerary"><%= t(:itinerary) %></a>
+  </li>
+  <li>
+    <a class="page-scroll" data-turbolinks="false" href="<%= root_path %>#acommodations"><%= t(:acommodations) %></a>
+  </li>
+  <li>
+    <a class="page-scroll" data-turbolinks="false" href="<%= root_path %>#registry"><%= t(:registry) %></a>
+  </li>
+  <li>
+    <a class="page-scroll" data-turbolinks="false" href="#blog"><%= t(:blog) %></a>
+  </li>
+<% end %>
+
+<%= render 'welcome/intro' %>
 
 <section id="blog" class="content-section text-center white-section">
   <div class="container">
