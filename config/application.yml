@@ -6,7 +6,7 @@ groom_first_name: "John"
 groom_last_name: "Thornton"
 
 # Wedding Information
-wedding_date: 1855-10-01
+wedding_date: 2017-09-01
 wedding_city: "Milton"
 wedding_state: "Cambridgeshire" # optional
 wedding_country: "England" # optional
@@ -20,4 +20,7 @@ reception_time: 20:00:00
 reception_place: "Marlborough Mills"
 
 # Google Maps API Key
-gmaps_key: "AIzaSyB83NvPn1kxyYmxdsBexu33wk7PX9Ms8mA"
+gmaps_key: "YOUR_API_KEY at https://developers.google.com/maps/documentation/javascript/get-api-key"
+
+# PRODUCTION DB password
+db_production_pass: "password"

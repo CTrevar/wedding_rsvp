@@ -1,0 +1,11 @@
+en:
+  hello: "Hola"
+  acommodations: "Hoteles"
+  blog: "Blog"
+  itinerary: "Itinerario"
+  registry: "Mesa de Regalos"
+  first_name: "Nombre"
+  last_name: "Apellidos"
+  will_you_attend: "Por favor confirma tu asistencia, esto nos ayudará a tener una mejor logística para todas las actividades"
+  cant_attend: "Voy a asistir"
+  cannot_attend: "No podré asistir"

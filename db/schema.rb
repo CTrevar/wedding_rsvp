@@ -12,17 +12,20 @@
 
 ActiveRecord::Schema.define(version: 20170428203653) do
 
-  create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "activities", force: :cascade do |t|
     t.string   "name"
-    t.text     "description", limit: 65535
+    t.text     "description"
     t.string   "dress_code"
     t.date     "start_day"
     t.time     "start_hour"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -39,7 +42,7 @@ ActiveRecord::Schema.define(version: 20170428203653) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
   end
 
-  create_table "guests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "guests", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.boolean  "rsvp"
@@ -51,22 +54,22 @@ ActiveRecord::Schema.define(version: 20170428203653) do
     t.integer  "related_guest_id"
   end
 
-  create_table "hotels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "hotels", force: :cascade do |t|
     t.string   "name"
-    t.text     "description", limit: 65535
+    t.text     "description"
     t.string   "link"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "posts", force: :cascade do |t|
     t.string   "title"
-    t.text     "content",    limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "registries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "registries", force: :cascade do |t|
     t.string   "name"
     t.string   "link"
     t.datetime "created_at", null: false
