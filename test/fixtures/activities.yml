@@ -3,13 +3,13 @@
 one:
   name: MyString
   description: MyString
-  dress_code: 
+  dress_code: casual
   start_day: 2017-04-21
   start_hour: 2017-04-21 01:13:53
 
 two:
   name: MyString
   description: MyString
-  dress_code: 
+  dress_code: black tie
   start_day: 2017-04-21
   start_hour: 2017-04-21 01:13:53

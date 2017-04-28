@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170428050652) do
+ActiveRecord::Schema.define(version: 20170428203653) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.text     "description", limit: 65535
-    t.integer  "dress_code"
+    t.string   "dress_code"
     t.date     "start_day"
     t.time     "start_hour"
     t.datetime "created_at",                null: false
