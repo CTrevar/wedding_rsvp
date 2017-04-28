@@ -7,7 +7,11 @@ h1, .h1 {
   margin: 0 !important;
 }
 
-h4 { margin-bottom: 0 !important;}
+h4 { margin-bottom: 5px !important;}
+
+a {
+  cursor: pointer;
+}
 
 body#page-top {
   font-family: 'Crimson Text', serif;
@@ -17,13 +21,6 @@ body#page-top {
     font-family: 'Montserrat', sans-serif;
   }
 
-  .btn-primary {
-    background-color: #42DCA3;
-    border: 0;
-    &:hover {
-      background-color: darken(#42DCA3, 20%);
-    }
-  }
 }
 
 .intro {
