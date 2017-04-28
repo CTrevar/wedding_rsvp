@@ -33,19 +33,19 @@
               <a href="#page-top"></a>
             </li>
             <li>
-              <a class="page-scroll" href="#about"><%= t(:save_the_date) %></a>
+              <a class="page-scroll" data-turbolinks="false" href="#about"><%= t(:save_the_date) %></a>
             </li>
             <li>
-              <a class="page-scroll" href="#acommodations"><%= t(:acommodations) %></a>
+              <a class="page-scroll" data-turbolinks="false" href="#itinerary"><%= t(:itinerary) %></a>
             </li>
             <li>
-              <a class="page-scroll" href="#itinerary"><%= t(:itinerary) %></a>
+              <a class="page-scroll" data-turbolinks="false" href="#acommodations"><%= t(:acommodations) %></a>
             </li>
             <li>
-              <a class="page-scroll" href="#registry"><%= t(:registry) %></a>
+              <a class="page-scroll" data-turbolinks="false" href="#registry"><%= t(:registry) %></a>
             </li>
             <li>
-              <a class="page-scroll" href="#blog"><%= t(:blog) %></a>
+              <a class="page-scroll" data-turbolinks="false" href="#blog"><%= t(:blog) %></a>
             </li>
           </ul>
         </div>
@@ -57,11 +57,11 @@
     <%= yield %>
 
     <!-- Footer -->
-    <footer>
+    <!-- <footer>
       <div class="container text-center">
         <p>Copyright &copy; Your Website 2016</p>
       </div>
-    </footer>
+    </footer> -->
     <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['gmaps_key'] %>"></script> -->
 
     <%= javascript_include_tag 'grayscale.min' %>

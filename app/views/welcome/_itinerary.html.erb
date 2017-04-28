@@ -1,0 +1,11 @@
+<h2><%= t(:itinerary) %></h2>
+
+<% @itinerary.each do |day, activities| %>
+  <h5><%= day.strftime("%b %d") %></h5>
+  <% activities.each do |activity| %>
+    <h4><i class="fa fa-calendar" aria-hidden="true"></i> <%= activity.name %></h4>
+    <i class="fa fa-clock-o" aria-hidden="true"></i> <%= activity.start_hour.strftime("%I:%M %p") %>
+    <p><%= activity.description %></p>
+  <% end %>
+  <hr>
+<% end %>

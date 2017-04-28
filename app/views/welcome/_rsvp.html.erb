@@ -1,0 +1,54 @@
+<h2><%= t(:RSVP) %></h2>
+<% @registries.each do |registry| %>
+  <%= link_to registry.name, registry.link, class:"btn btn-info" %><br>
+<% end %>
+<p>
+  <%= t(:will_you_attend) %>
+</p>
+<%= form_tag(rsvp_path, class:"") do %>
+  <div class="row text-left">
+    <div class="form-group col-md-6">
+      <%= label_tag :first_name %>
+      <%= text_field_tag 'first_name', nil, class:"form-control" %>
+    </div>
+
+    <div class="form-group col-md-6">
+      <%= label_tag :last_name %>
+      <%= text_field_tag 'last_name', nil, class:"form-control" %>
+    </div>
+  </div>
+
+  <div class="row text-left">
+    <div class="form-group col-md-12">
+      <%= label_tag :email %>
+      <%= text_field_tag 'email', nil, class:"form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="radio-wrapper col-sm-6">
+      <%= radio_button_tag 'attending', true, true, id:"yes" %>
+      <div class="check"></div>
+      <label for="yes"><%= t(:can_attend) %></label>
+    </div>
+
+    <div class="radio-wrapper col-sm-6">
+      <%= radio_button_tag 'attending', false, false, id:"no" %>
+      <div class="check"></div>
+      <label for="no"><%= t(:cannot_attend) %></label>
+    </div>
+  </div>
+
+
+  <div id="more-guests"></div>
+
+  <div class="text-left">
+    <%= link_to "Add Another Guest", '#', onclick:"addGuestForm()", class:"btn btn-default", data: { turbolinks: false } %>
+  </div>
+
+  <div>
+    <br>
+    <%= submit_tag "Send", class:"btn btn-info btn-lg" %>
+  </div>
+
+<% end %>
