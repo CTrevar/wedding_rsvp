@@ -30,3 +30,8 @@ en:
   will_you_attend: "Will you be joining us at the wedding?"
   cant_attend: "I will attend the wedding"
   cannot_attend: "I cannot attend the wedding"
+  thanks_for_rsvp: "Thank you for RSVPing!"
+  rsvp_received: "Your RSVP has been sent."
+  days: "days"
+  hrs: "hrs"
+  min: "min"

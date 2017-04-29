@@ -1,4 +1,4 @@
-en:
+es:
   hello: "Hola"
   acommodations: "Hoteles"
   blog: "Blog"
@@ -9,3 +9,13 @@ en:
   will_you_attend: "Por favor confirma tu asistencia, esto nos ayudará a tener una mejor logística para todas las actividades"
   cant_attend: "Voy a asistir"
   cannot_attend: "No podré asistir"
+  thanks_for_rsvp: "Gracias"
+  rsvp_received: "Tu RSVP ha sido enviado."
+  days: "días"
+  hrs: "hrs"
+  min: "min"
+  date:
+    day_names: [Domingo, Lunes, Martes, Miércoles, Jueves, Viernes, Sábado]
+    abbr_day_names: [Dom, Lun, Mar, Mié, Jue, Vie, Sáb]
+    month_names: [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
+    abbr_month_names: [~, En, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic]

@@ -6,7 +6,7 @@ $ ->
   $('.countdown-container').countdown
     date: endDate
     render: (data) ->
-      $(@el).html '<div>' + @leadingZeros(data.days, 3) + ' <span>days</span></div><div>' + @leadingZeros(data.hours, 2) + ' <span>hrs</span></div><div>' + @leadingZeros(data.min, 2) + ' <span>min</span></div><div>' + @leadingZeros(data.sec, 2) + ' <span>sec</span></div>'
+      $(@el).html '<div>' + @leadingZeros(data.days, 3) + ' <span>'+'<%= I18n.t(:days) %>'+'</span></div><div>' + @leadingZeros(data.hours, 2) + ' <span>'+'<%= I18n.t(:hrs) %>'+'</span></div><div>' + @leadingZeros(data.min, 2) + ' <span>'+'<%= I18n.t(:min) %>'+'</span></div><div>' + @leadingZeros(data.sec, 2) + ' <span>sec</span></div>'
       return
   # $('.countdown-container').data('countdown').stop();
   return
