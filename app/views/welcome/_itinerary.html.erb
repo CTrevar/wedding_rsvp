@@ -5,7 +5,10 @@
   <% activities.each do |activity| %>
     <h4><i class="fa fa-calendar" aria-hidden="true"></i> <%= activity.name %></h4>
     <i class="fa fa-clock-o" aria-hidden="true"></i> <%= activity.start_hour.strftime("%I:%M %p") %>
-    <p><%= activity.description %></p>
+    <p>
+      <%= activity.description %><br>
+      <b><%= activity.dress_code %></b>
+    </p>
   <% end %>
   <hr>
 <% end %>
