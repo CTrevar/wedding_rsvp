@@ -56,27 +56,27 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
             <li class="">
-              <%= link_to "Dashboard", '#' %>
+              <%= link_to "Dashboard", admin_path, data: { turbolinks: false } %>
             </li>
 
             <li class="<%= 'active' if params[:controller] == "admin/guests" %>">
-              <%= link_to "Guests", admin_guests_path %>
+              <%= link_to "Guests", admin_guests_path, data: { turbolinks: false } %>
             </li>
 
             <li class="<%= 'active' if params[:controller] == "admin/hotels" %>">
-              <%= link_to "Hotels", admin_hotels_path %>
+              <%= link_to "Hotels", admin_hotels_path, data: { turbolinks: false } %>
             </li>
 
             <li class="<%= 'active' if params[:controller] == "admin/posts" %>">
-              <%= link_to "Posts", admin_posts_path %>
+              <%= link_to "Posts", admin_posts_path, data: { turbolinks: false } %>
             </li>
 
             <li class="<%= 'active' if params[:controller] == "admin/registries" %>">
-              <%= link_to "Registry", admin_registries_path %>
+              <%= link_to "Registry", admin_registries_path, data: { turbolinks: false } %>
             </li>
 
             <li class="<%= 'active' if params[:controller] == "admin/activities" %>">
-              <%= link_to "Itinerary", admin_activities_path %>
+              <%= link_to "Itinerary", admin_activities_path, data: { turbolinks: false } %>
             </li>
 
           </ul>
