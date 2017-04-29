@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :admins
 
   namespace :admin do
+    get '/', to: 'dashboard#index'
     resources :activities
     resources :guests do
       collection do
