@@ -1,4 +1,5 @@
 class Admin::RegistriesController < ApplicationController
+  before_action :authenticate_admin!
   before_action :set_registry, only: [:show, :edit, :update, :destroy]
   layout "admin"
 
