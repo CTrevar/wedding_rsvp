@@ -7,7 +7,7 @@
     <i class="fa fa-clock-o" aria-hidden="true"></i> <%= activity.start_hour.strftime("%I:%M %p") %>
     <p>
       <%= activity.description %><br>
-      <small><b><%= activity.dress_code %></b></small>
+      <small><b><%= t(:dress_code) %>: </b><%= activity.dress_code %></small>
     </p>
   <% end %>
   <hr>
