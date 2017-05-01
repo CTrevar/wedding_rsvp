@@ -40,6 +40,10 @@ body#page-top {
   .intro {
     height: 75% !important;
   }
+
+  p {
+    font-size: 18px !important;
+  }
 }
 
 .white-section {
@@ -54,6 +58,10 @@ body#page-top {
 
 .no-margin {
   margin: 0;
+}
+
+.btn-visit {
+  margin-top: -10px;
 }
 
 
