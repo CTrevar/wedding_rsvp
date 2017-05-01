@@ -21,6 +21,8 @@
 
 en:
   hello: "Hello world"
+  remove: "Remove"
+  send: "Send"
   acommodations: "Acommodations"
   blog: "Blog"
   itinerary: "Itinerary"
@@ -28,10 +30,12 @@ en:
   first_name: "First Name"
   last_name: "Last Name"
   will_you_attend: "Will you be joining us at the wedding?"
-  cant_attend: "I will attend the wedding"
+  can_attend: "I will attend the wedding"
   cannot_attend: "I cannot attend the wedding"
   thanks_for_rsvp: "Thank you for RSVPing!"
   rsvp_received: "Your RSVP has been sent."
+  another_guest: "Add Another Guest"
+  visit_online: "Visit Online"
   days: "days"
   hrs: "hrs"
   min: "min"

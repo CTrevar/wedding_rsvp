@@ -61,7 +61,7 @@
             <%= hotel.description %>
             <% if !hotel.link.empty? %>
             <br>
-              <%= link_to "Visit Online", hotel.link, class:"btn btn-primary" %>
+              <%= link_to t(:visit_online), hotel.link, class:"btn btn-primary" %>
             <% end %>
           </p>
         <% end %>

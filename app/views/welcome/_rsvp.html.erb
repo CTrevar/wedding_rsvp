@@ -43,12 +43,12 @@
   <div id="more-guests"></div>
 
   <div class="text-left">
-    <%= link_to "Add Another Guest", '#', onclick:"addGuestForm()", class:"btn btn-default", data: { turbolinks: false } %>
+    <%= link_to t(:another_guest), '#', onclick:"addGuestForm()", class:"btn btn-default", data: { turbolinks: false } %>
   </div>
 
   <div>
     <br>
-    <%= submit_tag "Send", class:"btn btn-info btn-lg" %>
+    <%= submit_tag t(:send), class:"btn btn-info btn-lg" %>
   </div>
 
 <% end %>
@@ -62,7 +62,7 @@
         <h4 class="modal-title"><%= t(:thanks_for_rsvp) %></h4>
       </div>
       <div class="modal-body">
-        <p><%= t(:rsvp_received) %>&hellip;</p>
+        <p><%= t(:rsvp_received) %></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
