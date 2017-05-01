@@ -57,13 +57,10 @@
         <h2><%= t(:acommodations) %></h2>
         <% @acommodations.each do |hotel| %>
           <h4><i class="fa fa-building" aria-hidden="true"></i> <%= hotel.name %></h4>
-          <p>
-            <%= hotel.description %>
+            <%= simple_format(hotel.description) %>
             <% if !hotel.link.empty? %>
-            <br>
-              <%= link_to t(:visit_online), hotel.link, class:"btn btn-primary" %>
+              <%= link_to t(:visit_online), hotel.link, class:"btn btn-default btn-visit" %>
             <% end %>
-          </p>
         <% end %>
       </div>
     </div>
@@ -78,8 +75,7 @@
       <% @registries.each do |registry| %>
         <%= link_to registry.name, registry.link, class:"btn btn-info" %><br>
       <% end %>
-      <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-      </p>
+
       <ul class="list-inline banner-social-buttons">
         <li>
           <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
