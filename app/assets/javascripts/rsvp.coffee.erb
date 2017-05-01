@@ -7,7 +7,7 @@ $ ->
     elem = $( "#guest-fields" ).clone()
     elem.removeClass('hidden')
     elem.find("input[type=text]").val("")
-    elem.append("<a onclick='removeGuestForm(this)'>Remove</a>")
+    elem.append("<a onclick='removeGuestForm(this)'>"+"<%= I18n.t(:remove) %>"+"</a>")
     elem.appendTo( "#more-guests" )
     return
   @removeGuestForm = (elem)->
