@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// THEME OVERRIDE
 h1, .h1 {
   font-size: 50px !important;
   margin: 0 !important;
@@ -32,22 +33,8 @@ body#page-top {
   padding-bottom: 60px !important;
 }
 
-@media (min-width: 767px) {
-  .content-section {
-    padding-top: 60px !important;
-  }
-
-  .intro {
-    height: 75% !important;
-  }
-
-  p {
-    font-size: 18px !important;
-  }
-
-  .navbar-custom.top-nav-collapse {
-    background: $brand-primary !important;
-  }
+.navbar-custom.top-nav-collapse {
+  background: $brand-primary !important;
 }
 
 .white-section {
@@ -60,6 +47,8 @@ body#page-top {
   color: #000;
 }
 
+
+// CUSTOM
 .no-margin {
   margin: 0;
 }
@@ -102,4 +91,40 @@ body#page-top {
   font-size: 20px;
   font-weight: normal;
   text-transform: uppercase;
+}
+
+
+
+// RESPONSIVE
+
+
+@media (min-width: 767px) {
+  .content-section {
+    padding-top: 60px !important;
+  }
+
+  .intro {
+    height: 75% !important;
+  }
+
+  p {
+    font-size: 18px !important;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .navbar-custom {
+    background: $brand-primary !important;
+  }
+
+}
+
+@media (max-width: 365px) {
+  h1 {
+    font-size: 2.2em !important;
+  }
+  h2 {
+    font-size: 1.5em !important;
+  }
 }
