@@ -85,8 +85,10 @@
       </nav>
 
       <div class="page-wrapper">
-        <div class="container-fluid">
-          <p id="notice"><%= notice %></p>
+        <div class="container-fluid admin-container">
+          <% if notice %>
+            <p id="notice"><%= notice %></p>
+          <% end %>
           <%= yield %>
         </div>
       </div>
