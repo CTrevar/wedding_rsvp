@@ -1,8 +1,6 @@
 // Place all the styles related to the Rsvp controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$radio_color: #42DCA3;
-
 .radio-wrapper{
   color: #999;
   position: relative;
@@ -27,7 +25,7 @@ $radio_color: #42DCA3;
 }
 
 .radio-label:hover{
-	color: lighten($radio_color, 20%);
+	color: lighten($brand-primary, 20%);
 }
 
 .radio-wrapper .check{
@@ -45,7 +43,7 @@ $radio_color: #42DCA3;
 }
 
 .radio-wrapper:hover .check {
-  border: 5px solid lighten($radio_color, 20%);
+  border: 5px solid lighten($brand-primary, 20%);
 }
 
 .radio-wrapper .check::before {
@@ -63,13 +61,13 @@ $radio_color: #42DCA3;
 }
 
 .custom-radio:checked ~ .check {
-  border: 5px solid $radio_color;
+  border: 5px solid $brand-primary;
 }
 
 .custom-radio:checked ~ .check::before{
-  background: $radio_color;
+  background: $brand-primary;
 }
 
 .custom-radio:checked ~ label{
-  color: $radio_color;
+  color: $brand-primary;
 }
