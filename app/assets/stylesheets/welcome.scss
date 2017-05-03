@@ -44,6 +44,10 @@ body#page-top {
   p {
     font-size: 18px !important;
   }
+
+  .navbar-custom.top-nav-collapse {
+    background: $brand-primary !important;
+  }
 }
 
 .white-section {
@@ -62,6 +66,20 @@ body#page-top {
 
 .btn-visit {
   margin-top: -10px;
+  margin-bottom: 35px;
+}
+
+.btn-default {
+  color: $brand-primary !important;
+  border-color: $brand-primary !important;
+  &:hover, &:focus{
+    color: #fff !important;
+    background-color: $brand-primary !important;
+  }
+}
+
+.description {
+  p { margin: 0 0 15px !important; }
 }
 
 
