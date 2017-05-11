@@ -34,7 +34,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Wedding Admin</a>
+          <%= link_to "Admin", admin_path, class:"navbar-brand" %>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
@@ -56,27 +56,39 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
             <li class="">
-              <%= link_to "Dashboard", admin_path, data: { turbolinks: false } %>
+              <%= link_to admin_path, data: { turbolinks: false } do %>
+                <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard
+              <% end %>
             </li>
 
             <li class="<%= 'active' if params[:controller] == "admin/guests" %>">
-              <%= link_to "Guests", admin_guests_path, data: { turbolinks: false } %>
+              <%= link_to admin_guests_path, data: { turbolinks: false } do %>
+                <i class="fa fa-users" aria-hidden="true"></i> Guests
+              <% end %>
             </li>
 
             <li class="<%= 'active' if params[:controller] == "admin/hotels" %>">
-              <%= link_to "Hotels", admin_hotels_path, data: { turbolinks: false } %>
+              <%= link_to admin_hotels_path, data: { turbolinks: false } do %>
+                <i class="fa fa-building" aria-hidden="true"></i> Hotels
+              <% end %>
             </li>
 
             <li class="<%= 'active' if params[:controller] == "admin/posts" %>">
-              <%= link_to "Posts", admin_posts_path, data: { turbolinks: false } %>
+              <%= link_to admin_posts_path, data: { turbolinks: false } do %>
+                <i class="fa fa-newspaper-o" aria-hidden="true"></i> Posts
+              <% end %>
             </li>
 
             <li class="<%= 'active' if params[:controller] == "admin/registries" %>">
-              <%= link_to "Registry", admin_registries_path, data: { turbolinks: false } %>
+              <%= link_to admin_registries_path, data: { turbolinks: false } do %>
+                <i class="fa fa-gift" aria-hidden="true"></i> Registry
+              <% end %>
             </li>
 
             <li class="<%= 'active' if params[:controller] == "admin/activities" %>">
-              <%= link_to "Itinerary", admin_activities_path, data: { turbolinks: false } %>
+              <%= link_to admin_activities_path, data: { turbolinks: false } do %>
+                <i class="fa fa-calendar" aria-hidden="true"></i> Itinerary
+              <% end %>
             </li>
 
           </ul>
