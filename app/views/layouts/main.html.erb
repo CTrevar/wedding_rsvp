@@ -42,12 +42,12 @@
         <p>Copyright &copy; Your Website 2016</p>
       </div>
     </footer> -->
-    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['gmaps_key'] %>"></script> -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['gmaps_key'] %>"></script>
 
     <%= javascript_include_tag 'grayscale.min' %>
 
     <script type="text/javascript">
-      <%#= render partial: 'welcome/map.js.erb' %>
+      <%= render partial: 'welcome/map.js.erb' %>
     </script>
   </body>
 </html>

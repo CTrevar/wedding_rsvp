@@ -19,9 +19,6 @@
     <a class="page-scroll" data-turbolinks="false" href="#acommodations"><%= t(:acommodations) %></a>
   </li>
   <li>
-    <a class="page-scroll" data-turbolinks="false" href="#registry"><%= t(:registry) %></a>
-  </li>
-  <li>
     <a class="page-scroll" data-turbolinks="false" href="<%= blog_path %>"><%= t(:blog) %></a>
   </li>
 <% end %>
@@ -67,32 +64,8 @@
   </div>
 </section>
 
-<!-- registry Section -->
-<section id="registry" class="content-section text-center white-section">
-  <div class="container">
-    <div class="col-lg-8 col-lg-offset-2">
-      <h2><%= t(:registry) %></h2>
-      <% @registries.each do |registry| %>
-        <%= link_to registry.name, registry.link, class:"btn btn-info" %><br>
-      <% end %>
-
-      <ul class="list-inline banner-social-buttons">
-        <li>
-          <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-        </li>
-        <li>
-          <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-        </li>
-        <li>
-          <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 <!-- RSVP Section -->
-<section id="rsvp" class="content-section text-center grey-section">
+<section id="rsvp" class="content-section text-center white-section">
   <div class="container">
     <div class="col-lg-8 col-lg-offset-2">
       <%= render 'welcome/rsvp' %>
@@ -100,8 +73,9 @@
   </div>
 </section>
 
+
 <!-- Map Section -->
-<!-- <div id="map"></div> -->
+<div id="map"></div>
 
 
 <div id="guest-fields" class="guest-fields hidden">

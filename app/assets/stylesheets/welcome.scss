@@ -27,7 +27,13 @@ body#page-top {
 }
 
 .intro {
-  background: image_url("couple") no-repeat bottom center scroll #000 !important;
+  background: image_url("couple") no-repeat center center scroll #000 !important;
+  background-size: 100% !important;
+}
+
+.page-title{
+  color: #f1f1f1;
+  text-shadow: 2px 2px 9px rgba(150, 150, 150, 1);
 }
 
 .content-section {
@@ -47,6 +53,11 @@ body#page-top {
 .grey-section {
   background-color: #eee;
   color: #000;
+}
+
+#map {
+  margin-top: 0 !important;
+  height: 300px !important;
 }
 
 
@@ -101,6 +112,11 @@ body#page-top {
 
 
 @media (min-width: 767px) {
+
+  .navbar-brand {
+    color: #000 !important;
+  }
+
   .content-section {
     padding-top: 60px !important;
   }
@@ -118,6 +134,19 @@ body#page-top {
 @media (max-width: 767px) {
   .navbar-custom {
     background: $brand-primary !important;
+  }
+
+  .intro {
+    margin-top: 54px;
+  }
+
+}
+
+@media (max-width: 554px) {
+
+  .intro {
+    margin-top: 0;
+    padding-bottom: 20px !important;
   }
 
 }
