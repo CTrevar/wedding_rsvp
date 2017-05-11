@@ -5,13 +5,14 @@ $ ->
   @addGuestForm = ->
     event.preventDefault()
     elem = $( "#guest-fields" ).clone()
+    elem.attr("id","")
     elem.removeClass('hidden')
     elem.find("input[type=text]").val("")
     elem.append("<a onclick='removeGuestForm(this)'>"+"<%= I18n.t(:remove) %>"+"</a>")
+    elem.append('<br><br>')
     elem.appendTo( "#more-guests" )
     return
   @removeGuestForm = (elem)->
     event.preventDefault()
-    console.log elem
     elem.closest('.guest-fields').remove()
     return

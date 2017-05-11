@@ -9,12 +9,12 @@
   <div class="row text-left">
     <div class="form-group col-md-6">
       <%= label_tag :first_name %>
-      <%= text_field_tag 'first_name', nil, class:"form-control" %>
+      <%= text_field_tag 'first_name', nil, class:"form-control", required: true %>
     </div>
 
     <div class="form-group col-md-6">
       <%= label_tag :last_name %>
-      <%= text_field_tag 'last_name', nil, class:"form-control" %>
+      <%= text_field_tag 'last_name', nil, class:"form-control", required: true %>
     </div>
   </div>
 
@@ -27,13 +27,13 @@
 
   <div class="row">
     <div class="radio-wrapper col-sm-6">
-      <%= radio_button_tag 'attending', true, true, id:"yes", class:"custom-radio" %>
+      <%= radio_button_tag 'rsvp', true, true, id:"yes", class:"custom-radio" %>
       <div class="check"></div>
       <label for="yes" class="radio-label"><%= t(:can_attend) %></label>
     </div>
 
     <div class="radio-wrapper col-sm-6">
-      <%= radio_button_tag 'attending', false, false, id:"no", class:"custom-radio" %>
+      <%= radio_button_tag 'rsvp', false, false, id:"no", class:"custom-radio" %>
       <div class="check"></div>
       <label for="no" class="radio-label"><%= t(:cannot_attend) %></label>
     </div>

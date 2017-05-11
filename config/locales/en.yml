@@ -37,6 +37,7 @@ en:
   another_guest: "Add Another Guest"
   visit_online: "Visit Online"
   dress_code: "Dress Code"
+  guest_error: "Remember to fill out your name and last name."
   days: "days"
   hrs: "hrs"
   min: "min"

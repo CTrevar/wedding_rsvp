@@ -1,1 +1,5 @@
-$('#rsvp-ok').modal()
+<% if !@guest.errors.empty? %>
+  alert("<%= I18n.t(:guest_error) %>");
+<% else %>
+  $('#rsvp-ok').modal()
+<% end %>
