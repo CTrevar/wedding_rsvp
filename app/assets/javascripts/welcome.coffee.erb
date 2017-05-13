@@ -3,6 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
   endDate = "<%= ENV['wedding_date'] %>"
+  console.log(endDate)
+  console.log( "<%= ENV['groom_last_name'] %>" )
   $('.countdown-container').countdown
     date: endDate
     render: (data) ->
