@@ -51,7 +51,8 @@
   <div class="acommodations-section">
     <div class="container">
       <div class="col-lg-8 col-lg-offset-2 text-left">
-        <h2><%= t(:acommodations) %></h2>
+        <h2 class="no-margin-bottom"><%= t(:acommodations) %></h2>
+        <p>Reservar mencionando la Boda de Marifer y Eduardo del 13 al 15 de Octubre para recibir tarifa preferencial</p>
         <% @acommodations.each do |hotel| %>
           <h4><i class="fa fa-building" aria-hidden="true"></i> <%= hotel.name %></h4>
             <%= simple_format(hotel.description) %>
