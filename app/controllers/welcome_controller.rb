@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
     @pretty_date = I18n.localize(@pretty_date, format: '%A, %d %B %Y')
     @acommodations = Hotel.all
     @registries = Registry.all
-    @itinerary = Activity.all.group_by(&:start_day)
+    @itinerary = Activity.all.order(:start_day).group_by(&:start_day)
   end
 
   def blog
