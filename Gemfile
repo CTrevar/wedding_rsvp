@@ -40,7 +40,7 @@ gem 'figaro'
 gem 'devise'
 
 gem 'ckeditor'
-# gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 5.0.0"
 
 
 group :development, :test do
