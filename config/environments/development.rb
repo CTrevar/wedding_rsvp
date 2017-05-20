@@ -38,8 +38,4 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-
-  # Make Capistrano symlink the public/system directory so that attachments survive new deployments
-  set :linked_dirs, fetch(:linked_dirs, []).push('public/system')
-
 end
