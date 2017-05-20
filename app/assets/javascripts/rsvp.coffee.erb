@@ -8,7 +8,7 @@ $ ->
     elem.attr("id","")
     elem.removeClass('hidden')
     elem.find("input[type=text]").val("")
-    elem.append("<a onclick='removeGuestForm(this)'>"+"<%= I18n.t(:remove) %>"+"</a>")
+    elem.append("<a class='blue-link' onclick='removeGuestForm(this)'>"+"<%= I18n.t(:remove) %>"+"</a>")
     elem.append('<br><br>')
     elem.appendTo( "#more-guests" )
     return

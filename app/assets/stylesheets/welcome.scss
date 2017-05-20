@@ -16,10 +16,6 @@ a {
   cursor: pointer;
 }
 
-.no-margin-bottom {
-  margin-bottom: 0;
-}
-
 body#page-top {
   font-family: 'Roboto', sans-serif;
 
@@ -65,8 +61,16 @@ body#page-top {
 
 
 // CUSTOM
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
 .no-margin {
   margin: 0;
+}
+
+.no-padding {
+  padding: 0;
 }
 
 .btn-visit {
@@ -83,8 +87,27 @@ body#page-top {
   }
 }
 
+.btn-big {
+  font-size: 20px;
+}
+
+.blue-link {
+  color: $brand-info !important;
+  &:hover {
+    color: $brand-primary !important;
+  }
+}
+
 .description {
-  p { margin: 0 0 15px !important; }
+  p {
+    font-size: 15px !important;
+    margin: 0 0 15px !important;
+  }
+}
+
+.small-text {
+  font-size: 15px !important;
+  margin-bottom: 0;
 }
 
 
