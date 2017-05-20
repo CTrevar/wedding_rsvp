@@ -8,5 +8,13 @@
   <%= @registry.link %>
 </p>
 
-<%= link_to 'Edit', edit_admin_registry_path(@registry) %> |
-<%= link_to 'Back', admin_registries_path %>
+<% if @registry.brand_logo.file? %>
+  <p>
+    <strong>Brand Logo:</strong>
+    <%= image_tag @registry.brand_logo.url(:medium) %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_admin_registry_path(@registry), data: { turbolinks: false } %> |
+<%= link_to 'Back', admin_registries_path, data: { turbolinks: false } %>

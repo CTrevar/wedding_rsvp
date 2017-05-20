@@ -1,4 +1,5 @@
-<%= form_for([:admin, registry]) do |f| %>
+<%= form_for([:admin, registry], html: { multipart: true }) do |f| %>
+
   <% if registry.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(registry.errors.count, "error") %> prohibited this registry from being saved:</h2>
@@ -14,6 +15,11 @@
   <div class="form-group field">
     <%= f.label :name %>
     <%= f.text_field :name, class:"form-control" %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :brand_logo %>
+    <%= f.file_field :brand_logo %>
   </div>
 
   <div class="form-group field">
