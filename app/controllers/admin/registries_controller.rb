@@ -71,6 +71,6 @@ class Admin::RegistriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def registry_params
-      params.require(:registry).permit(:name, :link)
+      params.require(:registry).permit(:name, :link, :image_link)
     end
 end

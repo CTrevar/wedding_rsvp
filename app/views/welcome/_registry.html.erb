@@ -3,10 +3,17 @@
 <% @registries.each do |registry| %>
   <% unless registry.link.empty? %>
     <div>
-      <%= link_to registry.link, class:"btn btn-default btn-big" do %>
-        <i class="fa fa-amazon" aria-hidden="true"></i> <%= registry.name %>
+      <% if registry.image_link.nil? %>
+        <%= link_to registry.link, class:"btn btn-default btn-big" do %>
+        <i class="fa fa-gift" aria-hidden="true"></i> <%= registry.name %>
+        <% end %>
+     <% else %>
+        <%= link_to registry.link do %>
+          <img src="<%= registry.image_link %>" style="max-width:35%;">
+        <% end %>
       <% end %>
     </div>
     <br>
+
   <% end %>
 <% end %>

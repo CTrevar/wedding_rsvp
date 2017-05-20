@@ -8,5 +8,16 @@
   <%= @registry.link %>
 </p>
 
+<p>
+  <strong>Image Link:</strong>
+  <%= @registry.image_link %><br>
+</p>
+
+  <% unless @registry.image_link.nil? %>
+  <p>
+    <img src="<%= @registry.image_link %>" style="max-width:200px;">
+  </p>
+  <% end %>
+
 <%= link_to 'Edit', edit_admin_registry_path(@registry) %> |
 <%= link_to 'Back', admin_registries_path %>
