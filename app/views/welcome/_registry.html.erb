@@ -1,0 +1,12 @@
+<h2><%= t(:registry) %></h2>
+
+<% @registries.each do |registry| %>
+  <% unless registry.link.empty? %>
+    <div>
+      <%= link_to registry.link, class:"btn btn-default btn-big" do %>
+        <i class="fa fa-amazon" aria-hidden="true"></i> <%= registry.name %>
+      <% end %>
+    </div>
+    <br>
+  <% end %>
+<% end %>
