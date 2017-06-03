@@ -19,7 +19,7 @@
     <a class="page-scroll" data-turbolinks="false" href="<%= root_path %>#acommodations"><%= t(:acommodations) %></a>
   </li>
   <li>
-    <a class="page-scroll" data-turbolinks="false" href="#blog"><%= t(:blog) %></a>
+    <a class="page-scroll" data-turbolinks="false" href="#blog"><%= "#{ENV['wedding_city']} #{t(:blog)}" %></a>
   </li>
 <% end %>
 

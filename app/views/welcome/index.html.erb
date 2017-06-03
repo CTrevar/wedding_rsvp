@@ -21,7 +21,7 @@
     </li>
   <% end %>
   <li>
-    <a class="page-scroll" data-turbolinks="false" href="<%= blog_path %>"><%= t(:blog) %></a>
+    <a class="page-scroll" data-turbolinks="false" href="<%= blog_path %>"><%= "#{ENV['wedding_city']} #{t(:blog)}" %></a>
   </li>
 <% end %>
 
@@ -59,7 +59,7 @@
           <h4><i class="fa fa-building" aria-hidden="true"></i> <%= hotel.name %></h4>
             <%= simple_format(hotel.description) %>
             <% if !hotel.link.empty? %>
-              <%= link_to t(:visit_online), hotel.link, class:"btn btn-default btn-visit" %>
+              <%= link_to t(:visit_online), hotel.link, class:"btn btn-default btn-visit", target: "_blank" %>
             <% end %>
         <% end %>
       </div>
