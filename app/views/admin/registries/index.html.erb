@@ -5,7 +5,7 @@
     <thead>
       <tr>
         <th>Name</th>
-        <th>Link</th>
+        <th>Code</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -14,7 +14,7 @@
       <% @registries.each do |registry| %>
         <tr>
           <td><%= registry.name %></td>
-          <td><%= registry.link %></td>
+          <td><%= registry.code %></td>
           <td><%= link_to 'Show', admin_registry_path(registry) %></td>
           <td><%= link_to 'Edit', edit_admin_registry_path(registry) %></td>
           <td><%= link_to 'Destroy', admin_registry_path(registry), method: :delete, data: { confirm: 'Are you sure?' } %></td>

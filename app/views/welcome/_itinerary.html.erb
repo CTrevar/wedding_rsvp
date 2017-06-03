@@ -1,14 +1,14 @@
 <h2><%= t(:itinerary) %></h2>
 
 <% @itinerary.each do |day, activities| %>
-  <div class="col-sm-12">
+  <div class="col-sm-12 no-padding">
     <h4><%= day.strftime("%b %d") %></h4>
   </div>
   <% activities.each do |activity| %>
-  <div class="col-sm-12 col-md-2">
+  <div class="col-sm-12 col-md-2 no-padding">
     <p class="small-text"><i class="fa fa-clock-o" aria-hidden="true"></i> <%= activity.start_hour.strftime("%I:%M %p") %></p>
   </div>
-  <div class="col-sm-12 col-md-10">
+  <div class="col-sm-12 col-md-10 no-padding">
     <h4><i class="fa fa-calendar" aria-hidden="true"></i> <%= activity.name %></h4>
     <div class="description"><%= simple_format(activity.description) %></div>
     <p><small><b><%= t(:dress_code) %>: </b><%= activity.dress_code %></small></p>

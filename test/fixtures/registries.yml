@@ -4,8 +4,10 @@ one:
   name: MyString
   link: MyString
   image_link: MyString
+  code: "c0dE"
 
 two:
   name: MyString
   link: MyString
   image_link: MyString
+  code: "cODE2"
