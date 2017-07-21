@@ -2,7 +2,7 @@
 <p><%= t(:registry_message) %></p>
 
 <% @registries.each do |registry| %>
-  <% unless registry.link.empty? %>
+  <% unless registry.link.nil? || registry.link.empty? %>
     <div>
       <% if registry.image_link.nil? %>
         <%= link_to registry.link, class:"btn btn-default btn-big" do %>
