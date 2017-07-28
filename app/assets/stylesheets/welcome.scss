@@ -132,6 +132,17 @@ body#page-top {
   text-transform: uppercase;
 }
 
+.hashtag {
+  font-family: 'Zilla Slab','Roboto', sans-serif;
+  // color: rgba(#ef260f, 0.9);
+  background-color: #4cd9d6;
+  // font-size: 62px;
+  font-size: 3.5em;
+  // text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #fff;
+}
 
 
 // RESPONSIVE
@@ -164,6 +175,10 @@ body#page-top {
 
   .intro {
     margin-top: 54px;
+  }
+
+  .hashtag {
+    font-size: 2em;
   }
 
 }
