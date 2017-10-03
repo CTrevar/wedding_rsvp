@@ -14,6 +14,10 @@ h4 { margin-bottom: 5px !important;}
 
 a {
   cursor: pointer;
+  color: #4cd9d6;
+  &:hover {
+    color: darken(#4cd9d6, 10%);
+  }
 }
 
 body#page-top {
@@ -41,7 +45,7 @@ body#page-top {
 }
 
 .navbar-custom.top-nav-collapse {
-  background: $brand-primary !important;
+  background: #3b3b3b !important;
 }
 
 .white-section {
@@ -170,7 +174,7 @@ body#page-top {
 
 @media (max-width: 767px) {
   .navbar-custom {
-    background: $brand-primary !important;
+    background: #3b3b3b !important;
   }
 
   .intro {
